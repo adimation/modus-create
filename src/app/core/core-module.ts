@@ -8,10 +8,11 @@ import { throwIfAlreadyLoaded } from "./module-import-guard";
 import { LoggerService } from "./services/logger-service";
 import { SpinnerService } from "./spinner/spinner.service";
 import { BaseService } from "./abstraction/base-service";
+import { NzSpinModule } from "ng-zorro-antd/spin";
 
 @NgModule({
   declarations: [SpinnerComponent, BaseComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, NzSpinModule],
   exports: [SpinnerComponent, BaseComponent],
   providers: [
     BaseService,

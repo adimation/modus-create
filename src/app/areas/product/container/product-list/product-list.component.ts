@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ApplicationService } from "../../../../core/services/application.service";
 import { LoggerService } from "../../../../core/services/logger-service";
 import { BaseComponent } from "../../../../core/abstraction/base-component";
-import { ProductService } from "src/app/services/product.service";
+import { ProductService } from "../../../../services/product.service";
 import { ProductDTO } from "src/app/models/product/product-dto";
 
 @Component({
@@ -24,7 +24,7 @@ export class ProductListComponent extends BaseComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    //this.getAllProducts();
+    this.getAllProducts();
   }
 
   public getAllProducts(): void {

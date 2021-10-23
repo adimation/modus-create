@@ -15,6 +15,6 @@ export class ProductService extends BaseService {
   }
 
   public getAllProducts(): Observable<ProductDTO[]> {
-    return this.get<ProductDTO[]>(this.config.productApiEndpoint, false);
+    return this.get<ProductDTO[]>(this.config.productApiEndpoint, true);
   }
 }

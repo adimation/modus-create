@@ -18,6 +18,7 @@ export class BaseService {
     @Inject(APP_SETTINGS) protected config: IAppSettings,
     protected applicationService: ApplicationService
   ) {
+    debugger;
     const injector = AppInjector.getInjector();
     this.http = injector.get(HttpClient);
     this.self = this;

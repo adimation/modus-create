@@ -1,1 +1,9 @@
-{{ product.id }}
+<nz-card [nzCover]="coverTemplate">
+  <nz-card-meta
+    [nzTitle]="product.title"
+    [nzDescription]="product.description"
+  ></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <img [alt]="product.title" [src]="product.images[0]" />
+</ng-template>

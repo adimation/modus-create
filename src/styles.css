@@ -4,3 +4,7 @@ html,
 body {
   font-family: sans-serif;
 }
+
+.text-centered {
+  text-align: center;
+}

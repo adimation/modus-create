@@ -4,4 +4,8 @@ import { Component } from "@angular/core";
   selector: "app-root",
   template: `<app-spinner></app-spinner><router-outlet></router-outlet>`
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor() {
+    console.log("AD");
+  }
+}

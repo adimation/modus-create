@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { ApplicationService } from "../../../../core/services/application.service";
 import { LoggerService } from "../../../../core/services/logger-service";
 import { BaseComponent } from "../../../../core/abstraction/base-component";
@@ -9,7 +9,7 @@ import { ProductDTO } from "src/app/models/product/product-dto";
   templateUrl: "./product-display.component.html",
   styleUrls: ["./product-display.component.css"]
 })
-export class ProductDisplayComponent extends BaseComponent {
+export class ProductDisplayComponent extends BaseComponent implements OnInit {
   @Input() product: ProductDTO;
 
   constructor(
@@ -17,6 +17,9 @@ export class ProductDisplayComponent extends BaseComponent {
     protected loggerService: LoggerService
   ) {
     super(applicationService, loggerService);
-    this.loggerService.debug("ProductList");
+  }
+
+  public ngOnInit(): void {
+    this.loggerService.info(this.product);
   }
 }
